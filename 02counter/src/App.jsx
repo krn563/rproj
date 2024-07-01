@@ -8,7 +8,10 @@ function App() {
   //let counter=5;  
   const addValue=()=>{
     if (counter<20) {
-      setCounter(counter+1) 
+      setCounter(prevCounter=> prevCounter+1) 
+      setCounter(prevCounter=> prevCounter+1)
+      //setCounter(counter+1)
+      
     }
     //console.log("clicked",counter)
     //counter=counter+1;
