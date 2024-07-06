@@ -7,9 +7,16 @@ function BasicForm() {
     const [allEntry,setAllEntry]=useState([])
     const submitForm=(e)=>{
         e.preventDefault()
-        const newEntry={email: email,password: password};
-        setAllEntry([...allEntry,newEntry])
-        console.log(allEntry);
+        if(email&&password){
+            const newEntry={id:new Date().getTime.toString(),email,password};
+            setAllEntry([...allEntry,newEntry])
+        // console.log(allEntry);
+            setEmail('')
+            setPassword('')
+        }
+        else{
+            alert("Please fill the form")
+        }
     }
   return (
     <>
@@ -37,10 +44,11 @@ function BasicForm() {
         <div>
             {
                 allEntry.map((currEle)=>{
-                    return(
-                        <div className='text-center text-2xl'> Credential are:
-                            <p>{currEle.email}</p>
-                            <p>{currEle.password}</p>
+                    const {id,email,password}=currEle;
+                    return(                        
+                        <div className='text-center text-2xl' key={id}> Credential are:
+                            <p>{email}</p>
+                            <p>{password}</p>
                         </div>
                     )
                 })
