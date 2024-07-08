@@ -4,13 +4,17 @@ import { useState } from 'react'
 function UseEffect1() {
     const[count,setCount]=useState(0)
     useEffect(()=>{
+       console.log("First one called")
        if(count>=1){
         document.title=`Chats(${count})`
        }
        else
         document.title=`Chats`
         
-      })
+      },[count])
+    useEffect(()=>{
+      console.log("Second one called");
+    },[])
     console.log("hello outside")
   return (
     <>
