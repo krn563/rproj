@@ -6,11 +6,12 @@ import UseStateArray from './Components/UseStateArray'
 import UseStateObject from './Components/UseStateObject'
 import UseEffect1 from './UseEffects/UseEffect1'
 import UseEffect2 from './UseEffects/UseEffect2'
+import UseEffectAPI from './UseEffects/UseEffectAPI'
 
 function App() {
   return (
     <>
-      <UseEffect2/>
+      <UseEffectAPI/>
     </>
   )
 }
