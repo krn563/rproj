@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { FcApproval } from "react-icons/fc";
 function GithubUsers({users}) {
   return (
     <>
@@ -13,7 +13,7 @@ function GithubUsers({users}) {
                 <img src={currEle.avatar_url} alt="image" className="w-40 rounded-md" />
               </div>
               <div className="left  grid gap-1 p-2">
-                <div className="title text-3xl">{currEle.login}</div>
+                <div className="title text-3xl flex place-content-center">{currEle.login}<FcApproval /></div>
                 <div className="heading text-xl">{currEle.type}</div>
                 <div className="count bg-blue-300 rounded-lg flex gap-1">
                   <div className="c1 p-2">
